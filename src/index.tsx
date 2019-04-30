@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const FormValidator = () => (
-  <h1>Reactstrap FormValidator Component</h1>
-)
+interface IProp {
+  message: string;
+}
 
-export default FormValidator
+const FormValidator: React.SFC<IProp> = props => {
+  return <h1>{props.message}</h1>;
+};
+
+FormValidator.defaultProps = {
+  message: "Reactstrap FormValidator Component"
+};
+
+export default FormValidator;
